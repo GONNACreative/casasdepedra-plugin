@@ -1,0 +1,185 @@
+name: Casas de Pedra
+version: 0.1.0
+description: Global configuration for Casas de Pedra.
+icon: plug
+author:
+  name: GONNA Creative
+  email: ola@gonnacreative.com
+homepage: https://github.com/gonnacreative/casasdepedra-plugin
+demo: http://www.casasdepedra.net
+keywords: grav, plugin, etc
+bugs: https://github.com/gonnacreative/casasdepedra-plugin/issues
+docs: https://github.com/gonnacreative/casasdepedra-plugin/blob/develop/README.md
+license: MIT
+
+form:
+  # Base
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    text_var:
+      type: text
+      label: PLUGIN_CASASDEPEDRA.TEXT_VARIABLE
+      help: PLUGIN_CASASDEPEDRA.TEXT_VARIABLE_HELP
+
+    # Billboard
+    billboard:
+      type: section
+      title: "Billboard"
+      underline: true
+      fields:
+        billboard_title:
+          type: text
+          label: "Title"
+          size: long
+
+        billboard_description:
+          type: textarea
+          label: "Description"
+          rows: 4
+          size: long
+
+        billboard_image:
+          type: file
+          label: "Image"
+          multiple: false
+          destination: "theme@:/images"
+          random_name: true
+          avoid_overwriting: false
+          limit: 10
+          accept:
+            - image/*
+
+        billboard_background_image:
+          type: file
+          label: "Background Image"
+          multiple: false
+          destination: "theme@:/images"
+          random_name: true
+          avoid_overwriting: false
+          limit: 10
+          accept:
+            - image/*
+
+    # Quote
+    quote:
+      type: section
+      title: "Quote"
+      underline: true
+      fields:
+        quote_text:
+          type: text
+          label: "Text"
+          size: long
+
+    # Location
+    location:
+      type: section
+      title: "Location"
+      underline: true
+      fields:
+
+        location_title:
+          type: text
+          label: "Title"
+          size: large
+
+        location_address_one:
+          type: text
+          label: "Address One"
+          size: large
+
+        location_address_two:
+          type: text
+          label: "Address Two"
+          size: large
+
+        location_postcode:
+          type: text
+          label: "Postcode"
+          size: medium
+
+        location_city:
+          type: text
+          label: "City"
+          size: medium
+
+        location_region:
+          type: text
+          label: "Region"
+          size: medium
+
+        location_country:
+          type: text
+          label: "Country"
+          size: medium
+
+        location_document:
+          type: file
+          label: "Document"
+          multiple: false
+          destination: "theme@:/docs"
+          random_name: true
+          avoid_overwriting: false
+          limit: 10
+          accept:
+            - application/pdf
+
+        location_document_label:
+          type: text
+          label: "Document label"
+          size: medium
+
+    # Map
+    map:
+      type: section
+      title: "Map"
+      underline: true
+      fields:
+
+        map_title:
+          type: text
+          label: "Title"
+          size: large
+
+        map_image:
+          type: file
+          label: "Image"
+          multiple: false
+          destination: "theme@:/images"
+          random_name: true
+          avoid_overwriting: false
+          limit: 10
+          accept:
+            - image/*
+
+    # Contact
+    contact:
+      type: section
+      title: "Contact"
+      underline: true
+      fields:
+
+        contact_title:
+          type: text
+          label: "Title"
+          size: large
+
+        contact_email:
+          type: text
+          label: "Email"
+          size: large
+
+        contact_telephone:
+          type: text
+          label: "Telephone"
+          size: large
