@@ -31,24 +31,13 @@ form:
       label: PLUGIN_CASASDEPEDRA.TEXT_VARIABLE
       help: PLUGIN_CASASDEPEDRA.TEXT_VARIABLE_HELP
 
-    # Billboard
-    billboard:
+    # Branding
+    branding:
       type: section
-      title: "Billboard"
+      title: "Branding"
       underline: true
       fields:
-        billboard_title:
-          type: text
-          label: "Title"
-          size: long
-
-        billboard_description:
-          type: textarea
-          label: "Description"
-          rows: 4
-          size: long
-
-        billboard_image:
+        branding_image:
           type: file
           label: "Image"
           multiple: false
@@ -58,28 +47,6 @@ form:
           limit: 10
           accept:
             - image/*
-
-        billboard_background_image:
-          type: file
-          label: "Background Image"
-          multiple: false
-          destination: "theme@:/images"
-          random_name: true
-          avoid_overwriting: false
-          limit: 10
-          accept:
-            - image/*
-
-    # Quote
-    quote:
-      type: section
-      title: "Quote"
-      underline: true
-      fields:
-        quote_text:
-          type: text
-          label: "Text"
-          size: long
 
     # Location
     location:
